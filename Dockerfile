@@ -1,4 +1,4 @@
-FROM golang:1.13.4 AS build
+FROM golang:1.14 AS build
 WORKDIR /go/src/github.com/zricethezav/gitleaks
 COPY . .
 RUN GO111MODULE=on CGO_ENABLED=0 go build -o bin/gitleaks *.go 
